@@ -30,3 +30,4 @@ conect(cell(X,Y), cell(X',Y')) :- column(X),column(X'), column(A), row(Y), row(Y
 :- column(X), column(X'), row(Y), row(Y'), not black(X,Y), not black(X',Y'), not conect(cell(X,Y),cell(X',Y')).
 
 #show black/2.
+#show cell/3.

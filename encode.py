@@ -1,5 +1,3 @@
-import pygame
-import clingo
 import sys
 
 def to_list(table):
