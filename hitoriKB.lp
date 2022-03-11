@@ -1,3 +1,6 @@
+%%%Autor 1: Antonio Vila Leis
+%%%Autor 2: Santiago López Silva
+
 %Marcar casilla en negro
 {black(X,Y)} :- cell(X,Y,N).
 
