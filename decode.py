@@ -1,4 +1,5 @@
 import sys
+import re
 
 def separar(data):
     return data.split()
@@ -11,13 +12,15 @@ def read():
     digit = list()
     blacks = list()
     for x in data:
-        if x[0] == "c":
-            digit.append(int(x[9]))
+        if x[0] == "c" and x[1] == "e":
+            n = list()
+            n = [str(num) for num in re.split('(|,|)' ,x) if num.isdigit() or num == "a" or num == "b" or num == "c"]
+            digit.append(n[len(n) - 1])
         
-        elif x[0] == "b":
+        elif x[0] == "b" and x[1] == "l":
             dupla = list()
-            dupla.append(int(x[6]))
-            dupla.append(int(x[8]))
+            dupla.append(int(x[(x.index('(')+1):x.index(',')]))
+            dupla.append(int(x[(x.index(',')+1):x.index(')')]))
             blacks.append(dupla)
     hitori = list()
     hitori.append(digit)
@@ -39,7 +42,6 @@ def draw_tab(digit, black):
         else:
             sys.stdout.write(str(x) + " ")
             
-            
         if i >= (pow(len(digit), 0.5)-1):
             i = 0
             j += 1
@@ -49,5 +51,7 @@ def draw_tab(digit, black):
             
 hitori = read()
 draw_tab(hitori[0], hitori[1])
+#print(hitori[1])
+
 
 

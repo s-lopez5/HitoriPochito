@@ -1,4 +1,3 @@
-digit(1..5).
 row(0..4).
 column(0.. 4).
 cell(0,0,1).cell(1,0,1).cell(2,0,2).cell(3,0,1).cell(4,0,4).
