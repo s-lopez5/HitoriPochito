@@ -22,7 +22,7 @@ def leer ():
         else: 
             string += "cell(" + str(i) + "," + str(j) + "," + x + ")."
             i += 1
-    string2 = "row(0.." + str(num-1) + ").\ncolumn(0.. " + str(num-1) + ").\n" #digit(1.." + str(num) + ").\n
+    string2 = "row(0.." + str(num-1) + ").\ncolumn(0.. " + str(num-1) + ").\n"
     string2 += string
     s = open(sys.argv[1].replace("txt","lp"), "w+")
     s.write(string2)

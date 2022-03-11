@@ -51,7 +51,7 @@ def draw_tab(digit, black):
             
 hitori = read()
 draw_tab(hitori[0], hitori[1])
-#print(hitori[1])
+
 
 
 
